@@ -52,7 +52,7 @@ def print_progress_bar(current: int,
     percent = int((current / total) * 100)
     bar_filled = int(bar_width * current / total)
     bar = "█" * bar_filled + "-" * (bar_width - bar_filled)
-    print(f"{prefix}: [{percent:>3}%/100%] {bar} [{current}/{total}]")
+    print(f"\r{prefix}: [{percent:>3}%/100%] {bar} [{current}/{total}]", end='', flush=True)
 
 
 
@@ -256,6 +256,8 @@ def main():
             )
             futures[future] = path.name
 
+        print_progress_bar(completed, len(video_paths), prefix="Обработка видео")
+
         for future in as_completed(futures):
             video_name = futures[future]
 
@@ -263,8 +265,8 @@ def main():
                 saved = future.result()
                 completed += 1
                 total_saved += saved
-                print_progress_bar(completed, len(video_paths), prefix="Progress")
-                print(f"\n[✓] {video_name}: {saved} frames saved")
+                print_progress_bar(completed, len(video_paths), prefix="Обработка видео")
+                # print(f"\n[✓] {video_name}: {saved} frames saved")
             except Exception as e:
                 print(f"[ERROR] Failed to process {video_name}: {e}")
 
