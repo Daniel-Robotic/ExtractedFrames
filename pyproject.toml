@@ -18,6 +18,6 @@ requires = ["uv", "setuptools"]
 build-backend = "setuptools.build_meta"
 
 [project.urls]
-Homepage = https://github.com/Daniel-Robotic/ExtractedFrames
-Source = https://github.com/Daniel-Robotic/ExtractedFrames
-Tracker = https://github.com/Daniel-Robotic/ExtractedFrames/issues
+Homepage = "https://github.com/Daniel-Robotic/ExtractedFrames"
+Source = "https://github.com/Daniel-Robotic/ExtractedFrames"
+Tracker = "https://github.com/Daniel-Robotic/ExtractedFrames/issues"
