@@ -1,8 +1,8 @@
 [project]
 name = "extractedframes"
-version = "0.1.0"
+version = "1.0.0"
 description = "CLI tool to extract frames from videos"
-authors = [{ name = "Daniel", email = "you@example.com" }]
+authors = [{ name = "Daniel", email = "grabardm@ml-dev.ru" }]
 license = "MIT"
 readme = "README.md"
 requires-python = ">=3.12"
